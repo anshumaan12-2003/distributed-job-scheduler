@@ -10,9 +10,13 @@ public class JobService {
 
     @Autowired
     private JobRepository jobRepository;
+    @Autowired
+    private SqsService sqsService;
 
     public Job submitJob(Job job) {
-        return jobRepository.save(job);
+        Job saved = jobRepository.save(job);
+        sqsService.sendJobToQueue(saved.getId());
+        return saved;
     }
 
     public List<Job> getAllJobs() {
