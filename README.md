@@ -147,6 +147,5 @@ cd distributed-job-scheduler
 
 Made by **[Anshumaan Singh](https://github.com/anshumaan12-2003)** · VIT Bhopal · B.Tech CSE 2027
 
-*If this helped you, drop a ⭐*
 
 </div>
